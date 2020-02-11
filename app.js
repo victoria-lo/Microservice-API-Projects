@@ -40,6 +40,6 @@ app.get("/timestamp/", (req, res) => {
 
 
 //Listen for requests
-app.listen(5500, function(){
-    console.log("Nice, working");
-})
+var listener = app.listen(5500, function () {
+    console.log('Your app is listening on port ' + listener.address().port);
+});
