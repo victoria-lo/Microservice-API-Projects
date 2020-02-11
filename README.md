@@ -2,7 +2,7 @@
 **Mini API Project inspired from FreeCodeCamp**
 > 100DaysOfCode: Day 9
 
-📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-6-of-100-d1c2ee038aca)
+📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-9-of-100-5dc2f6086b3)
 
 ## The Project
 - Nodejs, express, cors, body-parser
