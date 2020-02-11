@@ -10,6 +10,9 @@ var app = module.exports = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get("/", function (req, res) {
+    res.sendFile(__dirname + '/index.html');
+});
 //GET to return JSON that formats dateValue parameter using these 2 methods:
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
