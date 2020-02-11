@@ -10,14 +10,11 @@ var app = module.exports = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get("/", function (req, res) {
-    res.sendFile(__dirname + '/index.html');
-});
 //GET to return JSON that formats dateValue parameter using these 2 methods:
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 
-app.get('/timestamp/:dateValue', function(req,res){
+app.get('/:dateValue', function(req,res){
     let dateValue = req.params.dateValue; //gets request date, can be unix or ISO-8601 format
     
     //if more than 5 digits, it must be a unix string
@@ -37,7 +34,7 @@ app.get('/timestamp/:dateValue', function(req,res){
 });
 
 //In case user did not give a date param, return the current date
-app.get("/timestamp/", (req, res) => {
+app.get("/", (req, res) => {
     res.json({ unix: Date.now(), utc: Date()});
 });
 
