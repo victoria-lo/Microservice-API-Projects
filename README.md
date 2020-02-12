@@ -1,3 +1,8 @@
+# Table of Contents
+- [Timestamp Microservice](#timestamp)
+- [Request Header](#request-header)
+
+<a name="timestamp"></a>
 # Timestamp Microservice ⌛
 **Mini API Project inspired from FreeCodeCamp**
 > 100DaysOfCode: Day 9
@@ -21,4 +26,19 @@ e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
 #### Example output:
 * { "unix": 1450137600, "natural": "December 15, 2015" }
 
+# Request Header
+**Request Header Parser Microservice inspired from FreeCodeCamp**
+> 100 Days of Code: Day 10
 
+📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-9-of-100-5dc2f6086b3)
+
+👀 [VIEW PROJECT](https://100daysofcode-day10.glitch.me)
+
+## The Project
+- Gets the IP address, preferred languages (from header `Accept-Language`) and system infos (from header `User-Agent`) for client's device.
+
+#### Example usage:
+`[base_url]/api/whoami`
+
+#### Example output:
+`{"ipaddress":"159.20.14.100","language":"en-US,en;q=0.5","software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"}`
