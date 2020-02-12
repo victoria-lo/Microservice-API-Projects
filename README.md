@@ -3,20 +3,15 @@
 - [Request Header](#request-header)
 
 <a name="timestamp"></a>
-# Timestamp Microservice ⌛
-**Mini API Project inspired from FreeCodeCamp**
+# Timestamp ⌛
+**Timestamp Microservice Project inspired from FreeCodeCamp**
 > 100DaysOfCode: Day 9
 
 📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-9-of-100-5dc2f6086b3)
 
 👀 [VIEW PROJECT](https://100daysofcode-day9.glitch.me)
 
-## The Project
-- Nodejs, express, cors, body-parser
-- Built to learn more about back-end web development
-
-### User stories :
-
+### The Project
 1. The API endpoint is `GET [project_url]/api/timestamp/:date_string?`
 2. A date string is valid if can be successfully parsed by `new Date(date_string)` (JS) . Note that the unix timestamp needs to be an **integer** (not a string) specifying **milliseconds**. In our test we will use date strings compliant with ISO-8601 (e.g. `"2016-11-20"`) because this will ensure an UTC timestamp.
 3. If the date string is **empty** it should be equivalent to trigger `new Date()`, i.e. the service uses the current timestamp.
@@ -31,14 +26,14 @@ e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
 `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`
 
 # Request Header
-**Request Header Parser Microservice inspired from FreeCodeCamp**
+**Request Header Parser Microservice Project inspired from FreeCodeCamp**
 > 100 Days of Code: Day 10
 
 📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-9-of-100-5dc2f6086b3)
 
 👀 [VIEW PROJECT](https://100daysofcode-day10.glitch.me)
 
-## The Project
+### The Project
 - Gets the IP address, preferred languages (from header `Accept-Language`) and system infos (from header `User-Agent`) for client's device.
 
 #### Example usage:
