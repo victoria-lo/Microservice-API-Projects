@@ -1,7 +1,8 @@
 # Table of Contents
 - [Timestamp Microservice](#timestamp)
-- [Request Header](#request-header)
-- [URL Shortener](#url-shortener)
+- [Request Header Microservice](#request-header)
+- [URL Shortener Mircroservice](#url-shortener)
+- [Exercise Tracker API](#exercise)
 
 <a name="timestamp"></a>
 # Timestamp ⌛
@@ -73,3 +74,27 @@ POST [project_url]/api/shorturl/new :  url=https://www.google.com to MongoDB Atl
 
 GET [project_url]/api/shorturl/1
 > Will redirect to: https://www.google.com
+
+<a name="exercise"></a>
+# Exercise Tracker 🏃
+**Exercise Tracker REST API Project inspired from FreeCodeCamp**
+> 100 Days of Code: Day 11
+
+📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-10-of-100-ad5f25d7faef)
+
+👀 [VIEW PROJECT](https://day11-exercise-tracker.glitch.me/)
+
+### The Project
+1. I can create a user by posting form data username to /api/exercise/new-user and returned will be an object with username and short_id.
+2. I can get an array of all users by getting api/exercise/users with the same info as when creating a user.
+3. I can add an exercise to any user by posting form data userId(_id), description, duration, and optionally date to /api/exercise/add. If no date supplied it will use current date. Returned will be the user object with also with the exercise fields added.
+4. I can retrieve a full exercise log of any user by getting /api/exercise/log with a parameter of userId(_id). Return will be the user object with added array log and count (total exercise count).
+5. I can retrieve part of the log of any user by also passing along optional parameters of from & to or limit. (Date format yyyy-mm-dd, limit = int)
+
+#### Creation Example:
+POST [project_url]/api/exercise/new-user :username to MongoDB Atlas
+> Receive JSON `{"username":"Gym Addict","short_id":"XXXXX"}`
+
+#### Add Exercise Example:
+POST [project_url]/api/exercise/add
+> Receive JSON `{"username": data.username, "description": descr, "duration": duration,"id": id, "date": date}`
