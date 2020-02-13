@@ -31,7 +31,7 @@ e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
 **Request Header Parser Microservice Project inspired from FreeCodeCamp**
 > 100 Days of Code: Day 10
 
-📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-9-of-100-5dc2f6086b3)
+📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-10-of-100-ad5f25d7faef)
 
 👀 [VIEW PROJECT](https://100daysofcode-day10.glitch.me)
 
@@ -42,13 +42,19 @@ e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
 `[base_url]/api/whoami`
 #### Example output:
 `{"ipaddress":"159.20.14.100","language":"en-US,en;q=0.5","software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"}`
+#### Solution
+```
+  var ipAddress = req.ip;
+  var language = req.headers['accept-language'];
+  var software= req.headers['user-agent'];
+```
 
 <a name="url-shortener"></a>
-# URL Shortener
+# URL Shortener 🍃
 **URL Shortener Microservice Project inspired from FreeCodeCamp**
 > 100 Days of Code: Day 10
 
-📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-9-of-100-5dc2f6086b3)
+📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-10-of-100-ad5f25d7faef)
 
 👀 [VIEW PROJECT](https://day10-urlshortener.glitch.me/)
 
@@ -58,15 +64,12 @@ Example : `{"original_url":"www.google.com","short_url":1}`
 2. If I pass an invalid URL that doesn't follow the valid `http(s)://www.example.com(/more/routes)` format, the JSON response will contain an error like `{"error":"invalid URL"}`. *HINT*: to be sure that the submitted url points to a valid site you can use the function `dns.lookup(host, cb)` from the `dns` core module.
 3. When I visit the shortened URL (i.e. `[project_url]/api/shorturl/1`, it will redirect me to my original link.
 
-
 #### Creation Example:
 
-POST [project_url]/api/shorturl/new - body (urlencoded) :  url=https://www.google.com
+POST [project_url]/api/shorturl/new :  url=https://www.google.com to MongoDB Atlas
+> Receive JSON `{"original_url":"www.google.com","short_url":1}`
 
-#### Usage:
+#### Usage Example:
 
-[this_project_url]/api/shorturl/3
-
-#### Will redirect to:
-
-https://www.google.com
+GET [project_url]/api/shorturl/1
+> Will redirect to: https://www.google.com
