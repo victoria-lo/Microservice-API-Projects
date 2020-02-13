@@ -3,6 +3,7 @@
 - [Request Header Microservice](#request-header)
 - [URL Shortener Mircroservice](#url-shortener)
 - [Exercise Tracker API](#exercise)
+- [File Metadata Microservice](#file)
 
 <a name="timestamp"></a>
 # Timestamp ⌛
@@ -98,3 +99,20 @@ POST [project_url]/api/exercise/new-user :username to MongoDB Atlas
 #### Add Exercise Example:
 POST [project_url]/api/exercise/add
 > Receive JSON `{"username": data.username, "description": descr, "duration": duration,"id": id, "date": date}`
+
+<a name="file"></a>
+# Meta File 📁
+**File Metadata Microservice Project inspired from FreeCodeCamp**
+> 100 Days of Code: Day 11
+
+📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-10-of-100-ad5f25d7faef)
+
+👀 [VIEW PROJECT](https://day11-filemeta.glitch.me/)
+
+### The Project
+1. I can submit a form that includes a file upload.
+2. The form file input field  has the "name" attribute set to "upfile". We rely on this in testing.
+3. When I submit something, I will receive the file name and size in bytes within the JSON response
+
+### Usage:
+* Go to the main page, and upload a file using the provided form.
