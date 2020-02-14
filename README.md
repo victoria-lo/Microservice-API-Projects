@@ -48,7 +48,7 @@ e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
 #### Example output:
 `{"ipaddress":"159.20.14.100","language":"en-US,en;q=0.5","software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"}`
 
-#### Technologies used:
+### Technologies used:
 - express
 
 <a name="url-shortener"></a>
@@ -76,7 +76,7 @@ POST [project_url]/api/shorturl/new :  url=https://www.google.com to MongoDB Atl
 GET [project_url]/api/shorturl/1
 > Will redirect to: https://www.google.com
 
-#### Technologies used:
+### Technologies used:
 - express
 - body parser
 - mongoDB/mongoose
@@ -106,7 +106,7 @@ POST [project_url]/api/exercise/new-user :username to MongoDB Atlas
 POST [project_url]/api/exercise/add
 > Receive JSON `{"username": data.username, "description": descr, "duration": duration,"id": id, "date": date}`
 
-#### Technologies used:
+### Technologies used:
 - express
 - body parser
 - mongoDB/mongoose
@@ -126,7 +126,7 @@ POST [project_url]/api/exercise/add
 2. The form file input field  has the "name" attribute set to "upfile". We rely on this in testing.
 3. When I submit something, I will receive the file name, type and size in bytes within the JSON response
 
-### Usage:
+#### Usage Example:
 * Go to the main page, and upload a file using the provided form.
 * API will return: `{"name": filename, "type": type, "size": size}`
 
