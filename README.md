@@ -28,6 +28,9 @@ e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
 #### Example output:
 `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`
 
+#### Technologies used:
+- express
+
 <a name="request-header"></a>
 # Request Header ℹ️
 **Request Header Parser Microservice Project inspired from FreeCodeCamp**
@@ -44,12 +47,9 @@ e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
 `[base_url]/api/whoami`
 #### Example output:
 `{"ipaddress":"159.20.14.100","language":"en-US,en;q=0.5","software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0"}`
-#### Solution
-```
-  var ipAddress = req.ip;
-  var language = req.headers['accept-language'];
-  var software= req.headers['user-agent'];
-```
+
+#### Technologies used:
+- express
 
 <a name="url-shortener"></a>
 # URL Shortener 🍃
@@ -76,12 +76,18 @@ POST [project_url]/api/shorturl/new :  url=https://www.google.com to MongoDB Atl
 GET [project_url]/api/shorturl/1
 > Will redirect to: https://www.google.com
 
+#### Technologies used:
+- express
+- body parser
+- mongoDB/mongoose
+- dns core module
+
 <a name="exercise"></a>
 # Exercise Tracker 🏃
 **Exercise Tracker REST API Project inspired from FreeCodeCamp**
 > 100 Days of Code: Day 11
 
-📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-10-of-100-ad5f25d7faef)
+📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-11-of-100-817fda44f4c1)
 
 👀 [VIEW PROJECT](https://day11-exercise-tracker.glitch.me/)
 
@@ -100,12 +106,18 @@ POST [project_url]/api/exercise/new-user :username to MongoDB Atlas
 POST [project_url]/api/exercise/add
 > Receive JSON `{"username": data.username, "description": descr, "duration": duration,"id": id, "date": date}`
 
+#### Technologies used:
+- express
+- body parser
+- mongoDB/mongoose
+- shortid
+
 <a name="file"></a>
 # Meta File 📁
 **File Metadata Microservice Project inspired from FreeCodeCamp**
 > 100 Days of Code: Day 11
 
-📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-10-of-100-ad5f25d7faef)
+📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-11-of-100-817fda44f4c1)
 
 👀 [VIEW PROJECT](https://day11-filemeta.glitch.me)
 
@@ -118,5 +130,6 @@ POST [project_url]/api/exercise/add
 * Go to the main page, and upload a file using the provided form.
 * API will return: `{"name": filename, "type": type, "size": size}`
 
-### npm used:
+### Technologies used:
+- express
 - multer
