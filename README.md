@@ -107,12 +107,16 @@ POST [project_url]/api/exercise/add
 
 📝 [DEVLOG](https://medium.com/@victoria2666/100-days-of-code-day-10-of-100-ad5f25d7faef)
 
-👀 [VIEW PROJECT](https://day11-filemeta.glitch.me/)
+👀 [VIEW PROJECT](https://day11-filemeta.glitch.me)
 
 ### The Project
 1. I can submit a form that includes a file upload.
 2. The form file input field  has the "name" attribute set to "upfile". We rely on this in testing.
-3. When I submit something, I will receive the file name and size in bytes within the JSON response
+3. When I submit something, I will receive the file name, type and size in bytes within the JSON response
 
 ### Usage:
 * Go to the main page, and upload a file using the provided form.
+* API will return: `{"name": filename, "type": type, "size": size}`
+
+### npm used:
+- multer
